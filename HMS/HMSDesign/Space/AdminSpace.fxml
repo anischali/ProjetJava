@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="760.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HMSDesign.Space.AdminSpaceController">
+	<children>
+		<AnchorPane layoutY="14.0" prefHeight="76.0" prefWidth="760.0" style="-fx-background-color: #3A8EBA;">
+			<children>
+				<ImageView fitHeight="77.0" fitWidth="73.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@images/admin.png" />
+					</image>
+				</ImageView>
+				<Text fill="WHITE" layoutX="90.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin space">
+					<font>
+						<Font name="System Bold" size="25.0" />
+					</font>
+				</Text>
+				<Label layoutX="616.0" layoutY="32.0" onMousePressed="#logOut" text="Logout" textFill="WHITE" />
+				<ImageView fitHeight="64.0" fitWidth="64.0" layoutX="672.0" layoutY="7.0" onMousePressed="#logOut" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@images/logout.png" />
+					</image>
+				</ImageView>
+			</children>
+		</AnchorPane>
+		<AnchorPane fx:id="adminHome" layoutX="45.0" layoutY="110.0" prefHeight="315.0" prefWidth="670.0" style="-fx-background-color: #3A8EBA;">
+			<children>
+				<ImageView fx:id="adminDoctors" fitHeight="80.0" fitWidth="80.0" layoutX="53.0" layoutY="28.0" onMousePressed="#homeAdminOnClick" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@images/doctors.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="adminNurse" fitHeight="80.0" fitWidth="80.0" layoutX="299.0" layoutY="28.0" onMousePressed="#homeAdminOnClick" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@images/nurse.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="adminReceipt" fitHeight="80.0" fitWidth="80.0" layoutX="531.0" layoutY="28.0" onMousePressed="#homeAdminOnClick" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@images/receptionist.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="adminPatient" fitHeight="80.0" fitWidth="80.0" layoutX="53.0" layoutY="139.0" onMousePressed="#homeAdminOnClick" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@images/patients.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="adminRdv" fitHeight="75.0" fitWidth="75.0" layoutX="299.0" layoutY="139.0" onMousePressed="#homeAdminOnClick" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@images/rdv.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="adminSetting" fitHeight="75.0" fitWidth="75.0" layoutX="531.0" layoutY="139.0" onMousePressed="#homeAdminOnClick" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@images/settings.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="63.0" layoutY="100.0" text="Médecins" />
+				<Label layoutX="302.0" layoutY="106.0" text="Infirmières" />
+				<Label layoutX="524.0" layoutY="106.0" text="Receptionistes" />
+				<Label layoutX="66.0" layoutY="204.0" text="Patients" />
+				<Label layoutX="323.0" layoutY="213.0" text="RDV" />
+				<Label layoutX="539.0" layoutY="213.0" text="Réglages" />
+			</children>
+		</AnchorPane>
+		<AnchorPane fx:id="AdminMedcinPanel" layoutY="95.0" opacity="0.8" prefHeight="370.0" prefWidth="750.0" visible="false">
+			<children>
+				<TabPane layoutY="49.0" prefHeight="294.0" prefWidth="754.0" style="-fx-background-color: white; -fx-border-color: white;" tabClosingPolicy="UNAVAILABLE">
+					<tabs>
+						<Tab text="Ajouter ">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+											<children>
+												<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+												<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+												<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+												<Label layoutX="29.0" layoutY="115.0" text="Situation Martial:" />
+												<Label layoutX="29.0" layoutY="147.0" text="N° Sécurité Social:" />
+												<Label layoutX="29.0" layoutY="182.0" text="Spécialité:" />
+												<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+												<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+												<Label layoutX="433.0" layoutY="82.0" text="Ville:" />
+												<Label layoutX="432.0" layoutY="115.0" text="Pays:" />
+												<Label layoutX="433.0" layoutY="147.0" text="N° Téléphone:" />
+												<Label layoutX="433.0" layoutY="182.0" text="N° Téléphone 2:" />
+												<Label layoutX="434.0" layoutY="215.0" text="E-mail:" />
+												<TextField fx:id="MnomAdd" layoutX="192.0" layoutY="9.0" />
+												<TextField fx:id="MprenomAdd" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="MnssAdd" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="MspecAdd" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="MadrAdd" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="McpAdd" layoutX="568.0" layoutY="39.0" />
+												<TextField fx:id="MvilleAdd" layoutX="568.0" layoutY="72.0" />
+												<TextField fx:id="MpaysAdd" layoutX="569.0" layoutY="106.0" />
+												<TextField fx:id="Mtel1Add" layoutX="569.0" layoutY="140.0" />
+												<TextField fx:id="Mtel2Add" layoutX="570.0" layoutY="172.0" />
+												<TextField fx:id="MemailAdd" layoutX="571.0" layoutY="205.0" />												
+												<TextField fx:id="MsexeAdd" layoutX="192.0" layoutY="74.0" />
+												<TextField fx:id="MsituationAdd" layoutX="192.0" layoutY="108.0" />
+												<Button layoutX="145.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Ajouter" onAction="#addDocToDB" />
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Supprimer">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+											<children>
+												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+													<children>
+														<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+															<children>
+																<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+																<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+																<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+																<Label layoutX="29.0" layoutY="115.0" text="Situation Martial:" />
+																<Label layoutX="29.0" layoutY="147.0" text="N° Sécurité Social:" />
+																<Label layoutX="29.0" layoutY="182.0" text="Spécialité:" />
+																<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+																<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+																<Label layoutX="433.0" layoutY="82.0" text="Ville:" />
+																<Label layoutX="432.0" layoutY="115.0" text="Pays:" />
+																<Label layoutX="433.0" layoutY="147.0" text="N° Téléphone:" />
+																<Label layoutX="433.0" layoutY="182.0" text="N° Téléphone 2:" />
+																<Label layoutX="434.0" layoutY="215.0" text="E-mail:" />
+												<TextField fx:id="MnomDel" layoutX="192.0" layoutY="9.0" />
+												<TextField fx:id="MprenomDel" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="MnssDel" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="MspecDel" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="MadrDel" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="McpDel" layoutX="568.0" layoutY="39.0" />
+												<TextField fx:id="MvilleDel" layoutX="568.0" layoutY="72.0" />
+												<TextField fx:id="MpaysDel" layoutX="569.0" layoutY="106.0" />
+												<TextField fx:id="Mtel1Del" layoutX="569.0" layoutY="140.0" />
+												<TextField fx:id="Mtel2Del" layoutX="570.0" layoutY="172.0" />
+												<TextField fx:id="MemailDel" layoutX="571.0" layoutY="205.0" />												
+												<TextField fx:id="MsexeDel" layoutX="192.0" layoutY="74.0" />
+												<TextField fx:id="MsituationDel" layoutX="192.0" layoutY="108.0" />
+																<Button layoutX="105.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+																<Button layoutX="230.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Supprimer" />
+																
+															</children>
+														</AnchorPane>
+													</children>
+												</AnchorPane>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Modifier">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+											<children>
+												<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+													<children>
+														<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+														<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+														<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+														<Label layoutX="29.0" layoutY="115.0" text="Situation Martial:" />
+														<Label layoutX="29.0" layoutY="147.0" text="N° Sécurité Social:" />
+														<Label layoutX="29.0" layoutY="182.0" text="Spécialité:" />
+														<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+														<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+														<Label layoutX="433.0" layoutY="82.0" text="Ville:" />
+														<Label layoutX="432.0" layoutY="115.0" text="Pays:" />
+														<Label layoutX="433.0" layoutY="147.0" text="N° Téléphone:" />
+														<Label layoutX="433.0" layoutY="182.0" text="N° Téléphone 2:" />
+														<Label layoutX="434.0" layoutY="215.0" text="E-mail:" />
+<TextField fx:id="MnomEdt" layoutX="192.0" layoutY="9.0" />
+												<TextField fx:id="MprenomEdt" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="MnssEdt" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="MspecEdt" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="MadrEdt" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="McpEdt" layoutX="568.0" layoutY="39.0" />
+												<TextField fx:id="MvilleEdt" layoutX="568.0" layoutY="72.0" />
+												<TextField fx:id="MpaysEdt" layoutX="569.0" layoutY="106.0" />
+												<TextField fx:id="Mtel1Edt" layoutX="569.0" layoutY="140.0" />
+												<TextField fx:id="Mtel2Edt" layoutX="570.0" layoutY="172.0" />
+												<TextField fx:id="MemailEdt" layoutX="571.0" layoutY="205.0" />												
+												<TextField fx:id="MsexeEdt" layoutX="192.0" layoutY="74.0" />
+												<TextField fx:id="MsituationEdt" layoutX="192.0" layoutY="108.0" />
+														<Button layoutX="105.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+														<Button layoutX="230.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Modifier" />
+														
+													</children>
+												</AnchorPane>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Afficher">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<TableView layoutX="14.0" prefHeight="259.0" prefWidth="752.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+											<columns>
+												<TableColumn prefWidth="75.0" text="ID" />
+												<TableColumn prefWidth="75.0" text="Nom" />
+												<TableColumn minWidth="0.0" prefWidth="0.0" text="Prénom" />
+												<TableColumn minWidth="0.0" prefWidth="0.0" text="Sexe" />
+												<TableColumn prefWidth="30.0" text="Situation" />
+												<TableColumn prefWidth="223.0" text="N° sécurité S." />
+												<TableColumn prefWidth="97.0" text="Specialité" />
+												<TableColumn minWidth="0.0" prefWidth="0.0" text="Adresse" />
+												<TableColumn prefWidth="302.0" text="Téléphone" />
+												<TableColumn prefWidth="75.0" text="Email" />
+											</columns>
+											<columnResizePolicy>
+												<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+											</columnResizePolicy>
+										</TableView>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Rechercher">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane fx:id="requestSearch" layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+											<children>
+												<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+												<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+												<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+												<Label layoutX="29.0" layoutY="115.0" text="Situation Martial:" />
+												<Label layoutX="29.0" layoutY="147.0" text="N° Sécurité Social:" />
+												<Label layoutX="29.0" layoutY="182.0" text="Spécialité:" />
+												<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+												<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+												<Label layoutX="433.0" layoutY="82.0" text="Ville:" />
+												<Label layoutX="432.0" layoutY="115.0" text="Pays:" />
+												<Label layoutX="433.0" layoutY="147.0" text="N° Téléphone:" />
+												<Label layoutX="433.0" layoutY="182.0" text="N° Téléphone 2:" />
+												<Label layoutX="434.0" layoutY="215.0" text="E-mail:" />
+												<TextField fx:id="MnomSrch" layoutX="192.0" layoutY="9.0" />
+												<TextField fx:id="MprenomSrch" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="MnssSrch" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="MspecSrch" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="MadrSrch" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="McpSrch" layoutX="568.0" layoutY="39.0" />
+												<TextField fx:id="MvilleSrch" layoutX="568.0" layoutY="72.0" />
+												<TextField fx:id="MpaysSrch" layoutX="569.0" layoutY="106.0" />
+												<TextField fx:id="Mtel1Srch" layoutX="569.0" layoutY="140.0" />
+												<TextField fx:id="Mtel2Srch" layoutX="570.0" layoutY="172.0" />
+												<TextField fx:id="MemailSrch" layoutX="571.0" layoutY="205.0" />												
+												<TextField fx:id="MsexeSrch" layoutX="192.0" layoutY="74.0" />
+												<TextField fx:id="MsituationSrch" layoutX="192.0" layoutY="108.0" />
+												<Button layoutX="145.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+												<TextField layoutX="192.0" layoutY="74.0" />
+												<TextField layoutX="192.0" layoutY="108.0" />
+											</children>
+										</AnchorPane>
+										<AnchorPane fx:id="resultSearch" layoutX="9.0" layoutY="11.0" prefHeight="254.0" prefWidth="754.0" visible="false">
+											<children>
+												<Button layoutX="336.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Retour" />
+												<TableView prefHeight="212.0" prefWidth="752.0" visible="false">
+													<columns>
+														<TableColumn prefWidth="75.0" text="ID" />
+														<TableColumn prefWidth="75.0" text="Nom" />
+														<TableColumn minWidth="0.0" prefWidth="0.0" text="Prénom" />
+														<TableColumn minWidth="0.0" prefWidth="0.0" text="Sexe" />
+														<TableColumn prefWidth="30.0" text="Situation" />
+														<TableColumn prefWidth="223.0" text="N° sécurité S." />
+														<TableColumn prefWidth="97.0" text="Specialité" />
+														<TableColumn minWidth="0.0" prefWidth="0.0" text="Adresse" />
+														<TableColumn prefWidth="302.0" text="Téléphone" />
+														<TableColumn prefWidth="75.0" text="Email" />
+													</columns>
+													<columnResizePolicy>
+														<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+													</columnResizePolicy>
+												</TableView>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+					</tabs>
+				</TabPane>
+				<AnchorPane layoutX="-6.0" layoutY="3.0" prefHeight="46.0" prefWidth="754.0">
+					<children>
+						<Text layoutX="312.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Médecins">
+							<font>
+								<Font name="System Bold Italic" size="28.0" />
+							</font>
+						</Text>
+						<ImageView fitHeight="45.0" fitWidth="64.0" layoutX="10.0" onMousePressed="#goBack" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@images/back.png" />
+							</image>
+						</ImageView>
+					</children>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+		<AnchorPane fx:id="AdminNursePanel" layoutY="95.0" opacity="0.8" prefHeight="370.0" prefWidth="750.0" visible="false">
+			<children>
+				<TabPane layoutY="49.0" prefHeight="294.0" prefWidth="754.0" style="-fx-background-color: white; -fx-border-color: white;" tabClosingPolicy="UNAVAILABLE">
+					<tabs>
+						<Tab text="Ajouter ">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+											<children>
+												<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+												<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+												<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+												<Label layoutX="26.0" layoutY="115.0" text="Situation Martial:" />
+												<Label layoutX="26.0" layoutY="147.0" text="N° Sécurité Social:" />
+												<Label layoutX="26.0" layoutY="182.0" text="Spécialité:" />
+												<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+												<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+												<Label layoutX="430.0" layoutY="82.0" text="Ville:" />
+												<Label layoutX="430.0" layoutY="115.0" text="Pays:" />
+												<Label layoutX="430.0" layoutY="147.0" text="N° Téléphone:" />
+												<Label layoutX="430.0" layoutY="182.0" text="N° Téléphone 2:" />
+												<Label layoutX="430.0" layoutY="215.0" text="E-mail:" />
+												<TextField fx:id="NrsnomAdd" layoutX="192.0" layoutY="9.0" />
+												<TextField fx:id="NrsprenomAdd" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="NrsnssAdd" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="NrsspecAdd" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="NrsadrAdd" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="NrscpAdd" layoutX="568.0" layoutY="39.0" />
+												<TextField fx:id="NrsvilleAdd" layoutX="568.0" layoutY="72.0" />
+												<TextField fx:id="NrspaysAdd" layoutX="569.0" layoutY="106.0" />
+												<TextField fx:id="Nrstel1Add" layoutX="569.0" layoutY="140.0" />
+												<TextField fx:id="Nrstel2Add" layoutX="570.0" layoutY="172.0" />
+												<TextField fx:id="NrsemailAdd" layoutX="571.0" layoutY="205.0" />												
+												<TextField fx:id="NrssexeAdd" layoutX="192.0" layoutY="74.0" />
+												<TextField fx:id="NrssituationAdd" layoutX="192.0" layoutY="108.0" />
+												<Button layoutX="145.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Ajouter" onAction="#addNurseToDB" />
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Supprimer">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+											<children>
+												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+													<children>
+														<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+															<children>
+																<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+																<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+																<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+																<Label layoutX="26.0" layoutY="115.0" text="Situation Martial:" />
+																<Label layoutX="26.0" layoutY="147.0" text="N° Sécurité Social:" />
+																<Label layoutX="26.0" layoutY="182.0" text="Spécialité:" />
+																<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+																<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+																<Label layoutX="430.0" layoutY="82.0" text="Ville:" />
+																<Label layoutX="430.0" layoutY="115.0" text="Pays:" />
+																<Label layoutX="430.0" layoutY="147.0" text="N° Téléphone:" />
+																<Label layoutX="430.0" layoutY="182.0" text="N° Téléphone 2:" />
+																<Label layoutX="430.0" layoutY="215.0" text="E-mail:" />
+																<TextField fx:id="NrsnomDel" layoutX="192.0" layoutY="9.0" />
+												<TextField fx:id="NrsprenomDel" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="NrsnssDel" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="NrsspecDel" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="NrsadrDel" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="NrscpDel" layoutX="568.0" layoutY="39.0" />
+												<TextField fx:id="NrsvilleDel" layoutX="568.0" layoutY="72.0" />
+												<TextField fx:id="NrspaysDel" layoutX="569.0" layoutY="106.0" />
+												<TextField fx:id="Nrstel1Del" layoutX="569.0" layoutY="140.0" />
+												<TextField fx:id="Nrstel2Del" layoutX="570.0" layoutY="172.0" />
+												<TextField fx:id="NrsemailDel" layoutX="571.0" layoutY="205.0" />												
+												<TextField fx:id="NrssexeDel" layoutX="192.0" layoutY="74.0" />
+												<TextField fx:id="NrssituationDel" layoutX="192.0" layoutY="108.0" />
+																<Button layoutX="105.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+																<Button layoutX="230.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Supprimer" />
+															</children>
+														</AnchorPane>
+													</children>
+												</AnchorPane>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Modifier">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+											<children>
+												<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+													<children>
+														<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+														<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+														<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+														<Label layoutX="26.0" layoutY="115.0" text="Situation Martial:" />
+														<Label layoutX="26.0" layoutY="147.0" text="N° Sécurité Social:" />
+														<Label layoutX="26.0" layoutY="182.0" text="Spécialité:" />
+														<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+														<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+														<Label layoutX="430.0" layoutY="82.0" text="Ville:" />
+														<Label layoutX="430.0" layoutY="115.0" text="Pays:" />
+														<Label layoutX="430.0" layoutY="147.0" text="N° Téléphone:" />
+														<Label layoutX="430.0" layoutY="182.0" text="N° Téléphone 2:" />
+														<Label layoutX="430.0" layoutY="215.0" text="E-mail:" />
+<TextField fx:id="NrsprenomDel" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="NrsnssEdt" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="NrsspecEdt" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="NrsadrEdt" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="NrscpEdt" layoutX="568.0" layoutY="39.0" />
+												<TextField fx:id="NrsvilleEdt" layoutX="568.0" layoutY="72.0" />
+												<TextField fx:id="NrspaysEdt" layoutX="569.0" layoutY="106.0" />
+												<TextField fx:id="Nrstel1Edt" layoutX="569.0" layoutY="140.0" />
+												<TextField fx:id="Nrstel2Edt" layoutX="570.0" layoutY="172.0" />
+												<TextField fx:id="NrsemailEdt" layoutX="571.0" layoutY="205.0" />												
+												<TextField fx:id="NrssexeEdt" layoutX="192.0" layoutY="74.0" />
+												<TextField fx:id="NrssituationEdt" layoutX="192.0" layoutY="108.0" />
+														<Button layoutX="105.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+														<Button layoutX="230.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Modifier" />
+													</children>
+												</AnchorPane>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Afficher">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<TableView layoutX="14.0" prefHeight="259.0" prefWidth="752.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+											<columns>
+												<TableColumn prefWidth="75.0" text="ID" />
+												<TableColumn prefWidth="75.0" text="Nom" />
+												<TableColumn minWidth="0.0" prefWidth="0.0" text="Prénom" />
+												<TableColumn minWidth="0.0" prefWidth="0.0" text="Sexe" />
+												<TableColumn prefWidth="30.0" text="Situation" />
+												<TableColumn prefWidth="223.0" text="N° sécurité S." />
+												<TableColumn prefWidth="97.0" text="Specialité" />
+												<TableColumn minWidth="0.0" prefWidth="0.0" text="Adresse" />
+												<TableColumn prefWidth="302.0" text="Téléphone" />
+												<TableColumn prefWidth="75.0" text="Email" />
+											</columns>
+											<columnResizePolicy>
+												<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+											</columnResizePolicy>
+										</TableView>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Rechercher">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane fx:id="requestSearch1" layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+											<children>
+												<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+												<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+												<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+												<Label layoutX="26.0" layoutY="115.0" text="Situation Martial:" />
+												<Label layoutX="26.0" layoutY="147.0" text="N° Sécurité Social:" />
+												<Label layoutX="26.0" layoutY="182.0" text="Spécialité:" />
+												<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+												<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+												<Label layoutX="430.0" layoutY="82.0" text="Ville:" />
+												<Label layoutX="430.0" layoutY="115.0" text="Pays:" />
+												<Label layoutX="430.0" layoutY="147.0" text="N° Téléphone:" />
+												<Label layoutX="430.0" layoutY="182.0" text="N° Téléphone 2:" />
+												<Label layoutX="430.0" layoutY="215.0" text="E-mail:" />
+												<TextField fx:id="NrsprenomSrch" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="NrsnssSrch" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="NrsspecSrch" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="NrsadrSrch" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="NrscpSrch" layoutX="568.0" layoutY="39.0" />
+												<TextField fx:id="NrsvilleSrch" layoutX="568.0" layoutY="72.0" />
+												<TextField fx:id="NrspaysSrch" layoutX="569.0" layoutY="106.0" />
+												<TextField fx:id="Nrstel1Srch" layoutX="569.0" layoutY="140.0" />
+												<TextField fx:id="Nrstel2Srch" layoutX="570.0" layoutY="172.0" />
+												<TextField fx:id="NrsemailSrch" layoutX="571.0" layoutY="205.0" />												
+												<TextField fx:id="NrssexeSrch" layoutX="192.0" layoutY="74.0" />
+												<TextField fx:id="NrssituationSrch" layoutX="192.0" layoutY="108.0" />
+												<Button layoutX="145.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+											</children>
+										</AnchorPane>
+										<AnchorPane fx:id="resultSearch1" layoutX="9.0" layoutY="11.0" prefHeight="254.0" prefWidth="754.0" visible="false">
+											<children>
+												<Button layoutX="336.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Retour" />
+												<TableView prefHeight="212.0" prefWidth="752.0" visible="false">
+													<columns>
+														<TableColumn prefWidth="75.0" text="ID" />
+														<TableColumn prefWidth="75.0" text="Nom" />
+														<TableColumn minWidth="0.0" prefWidth="0.0" text="Prénom" />
+														<TableColumn minWidth="0.0" prefWidth="0.0" text="Sexe" />
+														<TableColumn prefWidth="30.0" text="Situation" />
+														<TableColumn prefWidth="223.0" text="N° sécurité S." />
+														<TableColumn prefWidth="97.0" text="Specialité" />
+														<TableColumn minWidth="0.0" prefWidth="0.0" text="Adresse" />
+														<TableColumn prefWidth="302.0" text="Téléphone" />
+														<TableColumn prefWidth="75.0" text="Email" />
+													</columns>
+													<columnResizePolicy>
+														<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+													</columnResizePolicy>
+												</TableView>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+					</tabs>
+				</TabPane>
+				<AnchorPane layoutX="-6.0" layoutY="3.0" prefHeight="46.0" prefWidth="754.0">
+					<children>
+						<Text layoutX="286.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Infirmières">
+							<font>
+								<Font name="System Bold Italic" size="28.0" />
+							</font>
+						</Text>
+						<ImageView fitHeight="45.0" fitWidth="64.0" layoutX="10.0" onMousePressed="#goBack" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@images/back.png" />
+							</image>
+						</ImageView>
+					</children>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+		<AnchorPane fx:id="AdminRecepPanel" layoutY="95.0" opacity="0.8" prefHeight="370.0" prefWidth="750.0" visible="false">
+			<children>
+				<TabPane layoutY="49.0" prefHeight="294.0" prefWidth="754.0" style="-fx-background-color: white; -fx-border-color: white;" tabClosingPolicy="UNAVAILABLE">
+					<tabs>
+						<Tab text="Ajouter ">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+											<children>
+												<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+												<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+												<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+												<Label layoutX="26.0" layoutY="115.0" text="Situation Martial:" />
+												<Label layoutX="26.0" layoutY="147.0" text="N° Sécurité Social:" />
+												<Label layoutX="26.0" layoutY="182.0" text="Spécialité:" />
+												<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+												<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+												<Label layoutX="430.0" layoutY="82.0" text="Ville:" />
+												<Label layoutX="430.0" layoutY="115.0" text="Pays:" />
+												<Label layoutX="430.0" layoutY="147.0" text="N° Téléphone:" />
+												<Label layoutX="430.0" layoutY="182.0" text="N° Téléphone 2:" />
+												<Label layoutX="430.0" layoutY="215.0" text="E-mail:" />
+												<TextField fx:id="AssnomAdd" layoutX="192.0" layoutY="9.0" />
+												<TextField fx:id="AssprenomAdd" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="AssnssAdd" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="AssspecAdd" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="AssadrAdd" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="AsscpAdd" layoutX="568.0" layoutY="39.0" />
+												<TextField fx:id="AssvilleAdd" layoutX="568.0" layoutY="72.0" />
+												<TextField fx:id="AsspaysAdd" layoutX="569.0" layoutY="106.0" />
+												<TextField fx:id="Asstel1Add" layoutX="569.0" layoutY="140.0" />
+												<TextField fx:id="Asstel2Add" layoutX="570.0" layoutY="172.0" />
+												<TextField fx:id="AssemailAdd" layoutX="571.0" layoutY="205.0" />												
+												<TextField fx:id="AsssexeAdd" layoutX="192.0" layoutY="74.0" />
+												<TextField fx:id="AsssituationAdd" layoutX="192.0" layoutY="108.0" />
+												<Button layoutX="145.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Ajouter" />
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Supprimer">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+											<children>
+												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+													<children>
+														<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+															<children>
+																<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+																<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+																<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+																<Label layoutX="26.0" layoutY="115.0" text="Situation Martial:" />
+																<Label layoutX="26.0" layoutY="147.0" text="N° Sécurité Social:" />
+																<Label layoutX="26.0" layoutY="182.0" text="Spécialité:" />
+																<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+																<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+																<Label layoutX="430.0" layoutY="82.0" text="Ville:" />
+																<Label layoutX="430.0" layoutY="115.0" text="Pays:" />
+																<Label layoutX="430.0" layoutY="147.0" text="N° Téléphone:" />
+																<Label layoutX="430.0" layoutY="182.0" text="N° Téléphone 2:" />
+																<Label layoutX="430.0" layoutY="215.0" text="E-mail:" />
+																<TextField fx:id="AssnomDel" layoutX="192.0" layoutY="9.0" />
+												<TextField fx:id="AssprenomDel" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="AssnssDel" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="AssspecDel" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="AssadrDel" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="AsscpDel" layoutX="568.0" layoutY="39.0" />
+												<TextField fx:id="AssvilleDel" layoutX="568.0" layoutY="72.0" />
+												<TextField fx:id="AsspaysDel" layoutX="569.0" layoutY="106.0" />
+												<TextField fx:id="Asstel1Del" layoutX="569.0" layoutY="140.0" />
+												<TextField fx:id="Asstel2Del" layoutX="570.0" layoutY="172.0" />
+												<TextField fx:id="AssemailDel" layoutX="571.0" layoutY="205.0" />												
+												<TextField fx:id="AsssexeDel" layoutX="192.0" layoutY="74.0" />
+												<TextField fx:id="AsssituationDel" layoutX="192.0" layoutY="108.0" />
+																<Button layoutX="105.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+																<Button layoutX="230.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Supprimer" />
+															</children>
+														</AnchorPane>
+													</children>
+												</AnchorPane>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Modifier">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+											<children>
+												<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+													<children>
+														<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+														<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+														<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+														<Label layoutX="26.0" layoutY="115.0" text="Situation Martial:" />
+														<Label layoutX="26.0" layoutY="147.0" text="N° Sécurité Social:" />
+														<Label layoutX="26.0" layoutY="182.0" text="Spécialité:" />
+														<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+														<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+														<Label layoutX="430.0" layoutY="82.0" text="Ville:" />
+														<Label layoutX="430.0" layoutY="115.0" text="Pays:" />
+														<Label layoutX="430.0" layoutY="147.0" text="N° Téléphone:" />
+														<Label layoutX="430.0" layoutY="182.0" text="N° Téléphone 2:" />
+														<Label layoutX="430.0" layoutY="215.0" text="E-mail:" />
+<TextField fx:id="AssprenomDel" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="AssnssEdt" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="AssspecEdt" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="AssadrEdt" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="AsscpEdt" layoutX="568.0" layoutY="39.0" />
+												<TextField fx:id="AssvilleEdt" layoutX="568.0" layoutY="72.0" />
+												<TextField fx:id="AsspaysEdt" layoutX="569.0" layoutY="106.0" />
+												<TextField fx:id="Asstel1Edt" layoutX="569.0" layoutY="140.0" />
+												<TextField fx:id="Asstel2Edt" layoutX="570.0" layoutY="172.0" />
+												<TextField fx:id="AssemailEdt" layoutX="571.0" layoutY="205.0" />												
+												<TextField fx:id="AsssexeEdt" layoutX="192.0" layoutY="74.0" />
+												<TextField fx:id="AsssituationEdt" layoutX="192.0" layoutY="108.0" />
+														<Button layoutX="105.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+														<Button layoutX="230.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Modifier" />
+													</children>
+												</AnchorPane>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Afficher">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<TableView layoutX="14.0" prefHeight="259.0" prefWidth="752.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+											<columns>
+												<TableColumn prefWidth="75.0" text="ID" />
+												<TableColumn prefWidth="75.0" text="Nom" />
+												<TableColumn minWidth="0.0" prefWidth="0.0" text="Prénom" />
+												<TableColumn minWidth="0.0" prefWidth="0.0" text="Sexe" />
+												<TableColumn prefWidth="30.0" text="Situation" />
+												<TableColumn prefWidth="223.0" text="N° sécurité S." />
+												<TableColumn prefWidth="97.0" text="Specialité" />
+												<TableColumn minWidth="0.0" prefWidth="0.0" text="Adresse" />
+												<TableColumn prefWidth="302.0" text="Téléphone" />
+												<TableColumn prefWidth="75.0" text="Email" />
+											</columns>
+											<columnResizePolicy>
+												<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+											</columnResizePolicy>
+										</TableView>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Rechercher">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane fx:id="requestSearch1" layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+											<children>
+												<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+												<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+												<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+												<Label layoutX="26.0" layoutY="115.0" text="Situation Martial:" />
+												<Label layoutX="26.0" layoutY="147.0" text="N° Sécurité Social:" />
+												<Label layoutX="26.0" layoutY="182.0" text="Spécialité:" />
+												<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+												<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+												<Label layoutX="430.0" layoutY="82.0" text="Ville:" />
+												<Label layoutX="430.0" layoutY="115.0" text="Pays:" />
+												<Label layoutX="430.0" layoutY="147.0" text="N° Téléphone:" />
+												<Label layoutX="430.0" layoutY="182.0" text="N° Téléphone 2:" />
+												<Label layoutX="430.0" layoutY="215.0" text="E-mail:" />
+												<TextField fx:id="AssprenomSrch" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="AssnssSrch" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="AssspecSrch" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="AssadrSrch" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="AsscpSrch" layoutX="568.0" layoutY="39.0" />
+												<TextField fx:id="AssvilleSrch" layoutX="568.0" layoutY="72.0" />
+												<TextField fx:id="AsspaysSrch" layoutX="569.0" layoutY="106.0" />
+												<TextField fx:id="Asstel1Srch" layoutX="569.0" layoutY="140.0" />
+												<TextField fx:id="Asstel2Srch" layoutX="570.0" layoutY="172.0" />
+												<TextField fx:id="AssemailSrch" layoutX="571.0" layoutY="205.0" />												
+												<TextField fx:id="AsssexeSrch" layoutX="192.0" layoutY="74.0" />
+												<TextField fx:id="AsssituationSrch" layoutX="192.0" layoutY="108.0" />
+												<Button layoutX="145.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+											</children>
+										</AnchorPane>
+										<AnchorPane fx:id="resultSearch1" layoutX="9.0" layoutY="11.0" prefHeight="254.0" prefWidth="754.0" visible="false">
+											<children>
+												<Button layoutX="336.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Retour" />
+												<TableView prefHeight="212.0" prefWidth="752.0" visible="false">
+													<columns>
+														<TableColumn prefWidth="75.0" text="ID" />
+														<TableColumn prefWidth="75.0" text="Nom" />
+														<TableColumn minWidth="0.0" prefWidth="0.0" text="Prénom" />
+														<TableColumn minWidth="0.0" prefWidth="0.0" text="Sexe" />
+														<TableColumn prefWidth="30.0" text="Situation" />
+														<TableColumn prefWidth="223.0" text="N° sécurité S." />
+														<TableColumn prefWidth="97.0" text="Specialité" />
+														<TableColumn minWidth="0.0" prefWidth="0.0" text="Adresse" />
+														<TableColumn prefWidth="302.0" text="Téléphone" />
+														<TableColumn prefWidth="75.0" text="Email" />
+													</columns>
+
+													<columnResizePolicy>
+														<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+													</columnResizePolicy>
+												</TableView>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+					</tabs>
+				</TabPane>
+				<AnchorPane layoutX="-6.0" layoutY="3.0" prefHeight="46.0" prefWidth="754.0">
+					<children>
+						<Text layoutX="260.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receptionistes">
+							<font>
+								<Font name="System Bold Italic" size="28.0" />
+							</font>
+						</Text>
+						<ImageView fitHeight="45.0" fitWidth="64.0" layoutX="10.0" onMousePressed="#goBack" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@images/back.png" />
+							</image>
+						</ImageView>
+					</children>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+		<AnchorPane fx:id="AdminPatientPanel" layoutY="95.0" opacity="0.8" prefHeight="370.0" prefWidth="750.0" visible="false">
+			<children>
+				<TabPane layoutY="49.0" prefHeight="294.0" prefWidth="754.0" style="-fx-background-color: white; -fx-border-color: white;" tabClosingPolicy="UNAVAILABLE">
+					<tabs>
+						<Tab text="Ajouter ">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+											<children>
+												<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+												<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+												<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+												<Label layoutX="26.0" layoutY="115.0" text="Situation Martial:" />
+												<Label layoutX="26.0" layoutY="147.0" text="N° Sécurité Social:" />
+												<Label layoutX="26.0" layoutY="182.0" text="Date d'entrée:" />
+												<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+												<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+												<Label layoutX="430.0" layoutY="82.0" text="Ville:" />
+												<Label layoutX="430.0" layoutY="115.0" text="Pays:" />
+												<Label layoutX="430.0" layoutY="147.0" text="N° Téléphone:" />
+												<Label layoutX="430.0" layoutY="182.0" text="E-mail:" />
+												<Label layoutX="430.0" layoutY="215.0" text="Date de sortie:" />
+												<TextField fx:id="PnomAdd" layoutX="192.0" layoutY="9.0" />
+												<TextField fx:id="PprenomAdd" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="PsexeAdd" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="PsituationAdd" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="PnssAdd" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="PdateAdd" layoutX="566.0" layoutY="39.0" />
+												<TextField fx:id="PadrAdd" layoutX="566.0" layoutY="72.0" />
+												<TextField fx:id="PcpAdd" layoutX="566.0" layoutY="106.0" />
+												<TextField fx:id="PvilleAdd" layoutX="566.0" layoutY="140.0" />
+												<TextField fx:id="PpaysAdd" layoutX="566.0" layoutY="172.0" />
+												<TextField fx:id="Ptel1Add" layoutX="566.0" layoutY="205.0" />
+												<TextField fx:id="PemailAdd" layoutX="192.0" layoutY="75.0" />
+												<TextField fx:id="Pdate2Add" layoutX="192.0" layoutY="108.0" />
+												<Button layoutX="145.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Ajouter" onAction="#addPatientToDB" />
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Supprimer">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+											<children>
+												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+													<children>
+														<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+															<children>
+																<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+																<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+																<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+																<Label layoutX="26.0" layoutY="115.0" text="Situation Martial:" />
+																<Label layoutX="26.0" layoutY="147.0" text="N° Sécurité Social:" />
+																<Label layoutX="26.0" layoutY="182.0" text="Date d'entrée:" />
+																<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+																<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+																<Label layoutX="430.0" layoutY="82.0" text="Ville:" />
+																<Label layoutX="430.0" layoutY="115.0" text="Pays:" />
+																<Label layoutX="430.0" layoutY="147.0" text="N° Téléphone:" />
+																<Label layoutX="430.0" layoutY="182.0" text="E-mail:" />
+																<Label layoutX="430.0" layoutY="215.0" text="Date de sortie:" />
+																<TextField fx:id="PnomDel" layoutX="192.0" layoutY="9.0" />
+												<TextField fx:id="PprenomDel" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="PsexeDel" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="PsituationDel" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="PnssDel" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="PdateDel" layoutX="566.0" layoutY="39.0" />
+												<TextField fx:id="PadrDel" layoutX="566.0" layoutY="72.0" />
+												<TextField fx:id="PcpDel" layoutX="566.0" layoutY="106.0" />
+												<TextField fx:id="PvilleDel" layoutX="566.0" layoutY="140.0" />
+												<TextField fx:id="PpaysDel" layoutX="566.0" layoutY="172.0" />
+												<TextField fx:id="Ptel1Del" layoutX="566.0" layoutY="205.0" />
+												<TextField fx:id="PemailDel" layoutX="192.0" layoutY="75.0" />
+												<TextField fx:id="Pdate2Del" layoutX="192.0" layoutY="108.0" />
+																<Button layoutX="105.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+																<Button layoutX="230.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Supprimer" />
+															</children>
+														</AnchorPane>
+													</children>
+												</AnchorPane>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Modifier">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+											<children>
+												<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+													<children>
+														<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+														<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+														<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+														<Label layoutX="26.0" layoutY="115.0" text="Situation Martial:" />
+														<Label layoutX="26.0" layoutY="147.0" text="N° Sécurité Social:" />
+														<Label layoutX="26.0" layoutY="182.0" text="Date d'entrée:" />
+														<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+														<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+														<Label layoutX="430.0" layoutY="82.0" text="Ville:" />
+														<Label layoutX="430.0" layoutY="115.0" text="Pays:" />
+														<Label layoutX="430.0" layoutY="147.0" text="N° Téléphone:" />
+														<Label layoutX="430.0" layoutY="182.0" text="E-mail:" />
+														<Label layoutX="430.0" layoutY="215.0" text="Date de sortie:" />
+														<TextField fx:id="PnomEdt" layoutX="192.0" layoutY="9.0" />
+												<TextField fx:id="PprenomEdt" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="PsexeEdt" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="PsituationEdt" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="PnssEdt" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="PdateEdt" layoutX="566.0" layoutY="39.0" />
+												<TextField fx:id="PadrEdt" layoutX="566.0" layoutY="72.0" />
+												<TextField fx:id="PcpEdt" layoutX="566.0" layoutY="106.0" />
+												<TextField fx:id="PvilleEdt" layoutX="566.0" layoutY="140.0" />
+												<TextField fx:id="PpaysEdt" layoutX="566.0" layoutY="172.0" />
+												<TextField fx:id="Ptel1Edt" layoutX="566.0" layoutY="205.0" />
+												<TextField fx:id="PemailEdt" layoutX="192.0" layoutY="75.0" />
+												<TextField fx:id="Pdate2Edt" layoutX="192.0" layoutY="108.0" />
+														<Button layoutX="105.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+														<Button layoutX="230.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Modifier" />
+													</children>
+												</AnchorPane>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Afficher">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<TableView layoutX="14.0" prefHeight="259.0" prefWidth="752.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+											<columns>
+												<TableColumn prefWidth="75.0" text="ID" />
+												<TableColumn prefWidth="75.0" text="Nom" />
+												<TableColumn minWidth="0.0" prefWidth="0.0" text="Prénom" />
+												<TableColumn minWidth="0.0" prefWidth="0.0" text="Sexe" />
+												<TableColumn prefWidth="30.0" text="Situation" />
+												<TableColumn prefWidth="223.0" text="N° sécurité S." />
+												<TableColumn prefWidth="121.0" text="Entrée/Sortie" />
+												<TableColumn minWidth="0.0" prefWidth="25.0" text="Adresse" />
+												<TableColumn prefWidth="302.0" text="Téléphone" />
+												<TableColumn prefWidth="75.0" text="Email" />
+											</columns>
+											<columnResizePolicy>
+												<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+											</columnResizePolicy>
+										</TableView>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Rechercher">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0" visible="true">
+											<children>
+												<Label layoutX="26.0" layoutY="14.0" text="Nom:" />
+												<Label layoutX="26.0" layoutY="50.0" text="Prénom:" />
+												<Label layoutX="26.0" layoutY="82.0" text="Sexe:" />
+												<Label layoutX="26.0" layoutY="115.0" text="Situation Martial:" />
+												<Label layoutX="26.0" layoutY="147.0" text="N° Sécurité Social:" />
+												<Label layoutX="26.0" layoutY="182.0" text="Date d'entrée:" />
+												<Label layoutX="430.0" layoutY="14.0" text="Adresse:" />
+												<Label layoutX="430.0" layoutY="50.0" text="Code postal:" />
+												<Label layoutX="430.0" layoutY="82.0" text="Ville:" />
+												<Label layoutX="430.0" layoutY="115.0" text="Pays:" />
+												<Label layoutX="430.0" layoutY="147.0" text="N° Téléphone:" />
+												<Label layoutX="430.0" layoutY="182.0" text="E-mail:" />
+												<Label layoutX="430.0" layoutY="215.0" text="Date de sortie:" />
+												<TextField fx:id="PnomSrch" layoutX="192.0" layoutY="9.0" />
+												<TextField fx:id="PprenomSrch" layoutX="192.0" layoutY="41.0" />
+												<TextField fx:id="PsexeSrch" layoutX="192.0" layoutY="142.0" />
+												<TextField fx:id="PsituationSrch" layoutX="192.0" layoutY="176.0" />
+												<TextField fx:id="PnssSrch" layoutX="566.0" layoutY="5.0" />
+												<TextField fx:id="PdateSrch" layoutX="566.0" layoutY="39.0" />
+												<TextField fx:id="PadrSrch" layoutX="566.0" layoutY="72.0" />
+												<TextField fx:id="PcpSrch" layoutX="566.0" layoutY="106.0" />
+												<TextField fx:id="PvilleSrch" layoutX="566.0" layoutY="140.0" />
+												<TextField fx:id="PpaysSrch" layoutX="566.0" layoutY="172.0" />
+												<TextField fx:id="Ptel1Srch" layoutX="566.0" layoutY="205.0" />
+												<TextField fx:id="PemailSrch" layoutX="192.0" layoutY="75.0" />
+												<TextField fx:id="Pdate2Srch" layoutX="192.0" layoutY="108.0" />
+												<Button layoutX="145.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+											</children>
+										</AnchorPane>
+										<AnchorPane  layoutX="9.0" layoutY="11.0" prefHeight="254.0" prefWidth="754.0" visible="false">
+											<children>
+												<Button layoutX="336.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Retour" />
+												<TableView prefHeight="212.0" prefWidth="752.0">
+													<columns>
+														<TableColumn prefWidth="75.0" text="ID" />
+														<TableColumn prefWidth="75.0" text="Nom" />
+														<TableColumn minWidth="0.0" prefWidth="0.0" text="Prénom" />
+														<TableColumn minWidth="0.0" prefWidth="0.0" text="Sexe" />
+														<TableColumn prefWidth="30.0" text="Situation" />
+														<TableColumn prefWidth="223.0" text="N° sécurité S." />
+														<TableColumn prefWidth="97.0" text="Entrée/Sortie" />
+														<TableColumn minWidth="0.0" prefWidth="0.0" text="Adresse" />
+														<TableColumn prefWidth="302.0" text="Téléphone" />
+														<TableColumn prefWidth="75.0" text="Email" />
+													</columns>
+													<columnResizePolicy>
+														<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+													</columnResizePolicy>
+												</TableView>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+					</tabs>
+				</TabPane>
+				<AnchorPane layoutX="-6.0" layoutY="3.0" prefHeight="46.0" prefWidth="754.0">
+					<children>
+						<Text layoutX="311.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patients">
+							<font>
+								<Font name="System Bold Italic" size="28.0" />
+							</font>
+						</Text>
+						<ImageView fitHeight="45.0" fitWidth="64.0" layoutX="10.0" onMousePressed="#goBack" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@images/back.png" />
+							</image>
+						</ImageView>
+					</children>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+		<AnchorPane fx:id="AdminRDVPanel" layoutY="95.0" opacity="0.8" prefHeight="370.0" prefWidth="750.0" visible="false">
+			<children>
+				<TabPane layoutY="49.0" prefHeight="294.0" prefWidth="754.0" style="-fx-background-color: white; -fx-border-color: white;" tabClosingPolicy="UNAVAILABLE">
+					<tabs>
+						<Tab text="Ajouter ">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+											<children>
+												<Label layoutX="26.0" layoutY="14.0" text="ID Patient" />
+												<Label layoutX="26.0" layoutY="50.0" text="Date de RDV" />
+												<TextField layoutX="192.0" layoutY="9.0" />
+												<TextField layoutX="192.0" layoutY="41.0" />
+												<Button layoutX="145.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Ajouter" />
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Supprimer">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+											<children>
+												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+													<children>
+														<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+															<children>
+																<Label layoutX="26.0" layoutY="14.0" text="ID Patient" />
+																<Label layoutX="26.0" layoutY="50.0" text="Date de RDV" />
+																<TextField layoutX="192.0" layoutY="9.0" />
+																<TextField layoutX="192.0" layoutY="41.0" />
+																<Button layoutX="105.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+																<Button layoutX="230.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Supprimer" />
+															</children>
+														</AnchorPane>
+													</children>
+												</AnchorPane>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Modifier">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+											<children>
+												<AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0">
+													<children>
+														<Label layoutX="26.0" layoutY="14.0" text="ID Patient:" />
+														<Label layoutX="26.0" layoutY="50.0" text="Date de RDV:" />
+														<TextField layoutX="192.0" layoutY="9.0" />
+														<TextField layoutX="192.0" layoutY="41.0" />
+														<Button layoutX="105.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+														<Button layoutX="230.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Modifier" />
+													</children>
+												</AnchorPane>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Afficher">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<TableView layoutX="14.0" prefHeight="259.0" prefWidth="752.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+											<columns>
+												<TableColumn prefWidth="75.0" text="ID" />
+												<TableColumn prefWidth="75.0" text="Nom" />
+												<TableColumn minWidth="0.0" prefWidth="109.0" text="Prénom" />
+												<TableColumn prefWidth="185.0" text="N° sécurité S." />
+												<TableColumn prefWidth="124.0" text="Téléphone" />
+												<TableColumn prefWidth="182.0" text="Date de RDV" />
+											</columns>
+											<columnResizePolicy>
+												<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+											</columnResizePolicy>
+										</TableView>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Rechercher">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="758.0" style="-fx-background-color: white;">
+									<children>
+										<AnchorPane fx:id="requestSearch1111" layoutX="-1.0" layoutY="1.0" prefHeight="254.0" prefWidth="754.0" visible="false">
+											<children>
+												<Label layoutX="26.0" layoutY="14.0" text="ID Patient:" />
+												<Label layoutX="26.0" layoutY="50.0" text="Date de RDV:" />
+												<TextField layoutX="192.0" layoutY="9.0" />
+												<TextField layoutX="192.0" layoutY="41.0" />
+												<Button layoutX="145.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Rechercher" />
+											</children>
+										</AnchorPane>
+										<AnchorPane fx:id="resultSearch1111" layoutX="9.0" layoutY="11.0" prefHeight="254.0" prefWidth="754.0">
+											<children>
+												<Button layoutX="336.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Retour" />
+												<TableView prefHeight="209.0" prefWidth="752.0">
+													<columns>
+														<TableColumn prefWidth="75.0" text="ID" />
+														<TableColumn prefWidth="75.0" text="Nom" />
+														<TableColumn minWidth="0.0" prefWidth="109.0" text="Prénom" />
+														<TableColumn prefWidth="185.0" text="N° sécurité S." />
+														<TableColumn prefWidth="124.0" text="Téléphone" />
+														<TableColumn prefWidth="182.0" text="Date de RDV" />
+													</columns>
+													<columnResizePolicy>
+														<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+													</columnResizePolicy>
+												</TableView>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+					</tabs>
+				</TabPane>
+				<AnchorPane layoutX="-6.0" layoutY="3.0" prefHeight="46.0" prefWidth="754.0">
+					<children>
+						<Text layoutX="275.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rendez-Vous">
+							<font>
+								<Font name="System Bold Italic" size="28.0" />
+							</font>
+						</Text>
+						<ImageView fitHeight="45.0" fitWidth="64.0" layoutX="10.0" onMousePressed="#goBack" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@images/back.png" />
+							</image>
+						</ImageView>
+					</children>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+		<AnchorPane fx:id="adminSettingPanel" layoutY="95.0" prefHeight="370.0" prefWidth="750.0" visible="false">
+			<children>
+				<AnchorPane prefHeight="46.0" prefWidth="754.0">
+					<children>
+						<Text layoutX="305.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Réglages">
+							<font>
+								<Font name="System Bold Italic" size="28.0" />
+							</font>
+						</Text>
+						<ImageView fitHeight="45.0" fitWidth="64.0" layoutX="10.0" onMousePressed="#goBack" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@images/back.png" />
+							</image>
+						</ImageView>
+					</children>
+				</AnchorPane>
+				<AnchorPane layoutX="61.0" layoutY="76.0" prefHeight="200.0" prefWidth="633.0">
+					<children>
+						<Label layoutX="67.0" layoutY="39.0" text="Modifier votre Login:" />
+						<Label layoutX="67.0" layoutY="77.0" text="Modifier votre Mot de passe:" />
+						<Label layoutX="67.0" layoutY="113.0" text="Confirmer votre Mot de passe:" />
+						<TextField layoutX="287.0" layoutY="34.0" />
+						<TextField layoutX="287.0" layoutY="71.0" />
+						<TextField layoutX="287.0" layoutY="108.0" />
+						<Button layoutX="270.0" layoutY="164.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #3A8EBA; -fx-background-radius: 5em;" text="Modifier" />
+					</children>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>
